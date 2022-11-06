@@ -4,4 +4,4 @@ lec_act=float(input("ingresar lectura acutal de consumo: "))
 #caja negra
 pago_luz=((lec_act-lec_ant)*(costo_k))
 #salida
-print("el monto a pagar del recibo del agua es:"+str(pago_luz))
+print("el monto a pagar del recibo de luz es:"+str(pago_luz))
