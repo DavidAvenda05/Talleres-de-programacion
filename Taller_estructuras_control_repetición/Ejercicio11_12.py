@@ -1,38 +1,38 @@
-personas=[]
-consume=[]
-licor=[]
-edad=[]
-sexo=[]
-encuestados=int(input("Número de personas encuestadas: "))
+cons=0
+licor=0
+edad=0
+sexo=0
+Lista=[cons,licor,edad,sexo]
+i=0
 e=0
 i=0
 contSi=0
-sm=0
-sf=0
-mayor=0
-menor=0
-while (i<encuestados):
+sexoM=0
+sexoF=0
+mayorde=0
+menorde=0
+while (i):
     e=i+1
-    encuestados.append(e)
-    cons=str(input("Consume licor?"))
-    consume.append(cons)
-    if (cons==("no")):
-        eda=int(input("introducir edad: "))
-        edad.append(eda)
-        if eda>=18:
-            mayor=mayor+1
-        if eda<18:
-            menor=menor+1
-        sex=str(input("Sexo: "))
-        sexo.append(sex)
-        if sex=="M":
-            sm=sm+1
-        if sex=="F":
-            sf=sf+1
-        if (cons=="si"):
-            contSi=contSi+1
+    Lista.append(e)
+    consE=str(input("Consume licor? "))
+    cons.append(consE)
+    if (consE==("no")):
         edadE=int(input("Que edad tiene? "))
         edad.append(edadE)
+        if edadE>18:
+            mayorde=mayorde+1
+        if edadE<18:
+            menorde=menorde+1
+        sexoE=str(input("Su sexo? "))
+        sexo.append(sexoE)
+        if sexoE == "M":
+            sexoM=sexoM+1
+        if sexoE == "F":
+            sexoM=sexoF+1
+        if (consE=="si"):
+            contSi=contSi+1
+            edadE=int(input("Que edad tiene? "))
+            edad.append(edadE)
         if edadE>18:
             mayorde=mayorde+1
         if edadE<18:
@@ -52,11 +52,11 @@ while (i<encuestados):
             licor.append('Otros')         
         sexoE=str(input("Su sexo? "))
         sexo.append(sexoE) 
-        if sex== "M":
-            sm=sm+1
-        if sex== "F":
-            sf=sf+1  
+        if sexoE == "M":
+            sexoM=sexoM+1
+        if sexoE == "F":
+            sexoM=sexoF+1  
     i=i+1
 
 print(f"El total de consumidores es de: {contSi}")
-print(f"El total de mujeres menores de edad es de {sf-mayorde}")
+print(f"El total de mujeres menores de edad es de {sexoF-mayorde}")
